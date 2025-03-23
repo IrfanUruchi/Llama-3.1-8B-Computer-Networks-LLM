@@ -55,19 +55,24 @@ pip install torch transformers datasets peft huggingface_hub
 
 The large safetensor model shards are not stored in this repository. Instead i have hosted them in MEGA , there are 6 files totalling around 11-12GB :
 
-[model-00001-of-00006.safetensors:](https://mega.nz/file/rppWmDpS#X5utsf27-npdkFQVCQzz_gFi-s5a4oCuUSUYtJDw6p4)
-[model-00002-of-00006.safetensors:](https://mega.nz/file/jkRDVapZ#QhG5Pl8mu-DORIqCvaOfEcHspcVV79Xu-nxiaSa8pmA)
-[model-00003-of-00006.safetensors:](https://mega.nz/file/fsQBjQ6D#MI9gi1L9BDycxGh8qE9D92Q1IiJIMkujFwGeel60rk0)
-[model-00004-of-00006.safetensors:](https://mega.nz/file/7lB3GQZT#va8qP_X-ADHwtmgyxNcGhRklZ6TKFMg9JuNT7Xbl0js)
-[model-00005-of-00006.safetensors:](https://mega.nz/file/n0oS2IoQ#toljZ9fC2pG1r7WTHO_rHhBYC1qv2lGI6Jg_UgwKWS8)
-[model-00006-of-00006.safetensors:](will be added soon ;)
+- [model-00001-of-00006.safetensors:](https://mega.nz/file/rppWmDpS#X5utsf27-npdkFQVCQzz_gFi-s5a4oCuUSUYtJDw6p4)
+  
+- [model-00002-of-00006.safetensors:](https://mega.nz/file/jkRDVapZ#QhG5Pl8mu-DORIqCvaOfEcHspcVV79Xu-nxiaSa8pmA)
+  
+- [model-00003-of-00006.safetensors:](https://mega.nz/file/fsQBjQ6D#MI9gi1L9BDycxGh8qE9D92Q1IiJIMkujFwGeel60rk0)
+  
+- [model-00004-of-00006.safetensors:](https://mega.nz/file/7lB3GQZT#va8qP_X-ADHwtmgyxNcGhRklZ6TKFMg9JuNT7Xbl0js)
 
-After downloading , place all the safetensors files into the folder with the other configuration file in your local copy of the repository. . Ensure that the model loading scripts point to the correct directory.
+- [model-00005-of-00006.safetensors:](https://mega.nz/file/n0oS2IoQ#toljZ9fC2pG1r7WTHO_rHhBYC1qv2lGI6Jg_UgwKWS8)
+  
+- [model-00006-of-00006.safetensors:](https://mega.nz/file/2xQQBbKL#QMpL6l8bymBtAJnJPzZibcd8U3vv9b4BeQY7D4vcr0U)
+
+After downloading , place all the safetensors files into the folder with the other configuration file in your local copy of the repository. **Ensure that the model loading scripts point to the correct directory**.
 
 
 ## Usage
 
-Below is a example Python script to load the model (assuming the model files have been placed in a folder called model_files) and run inference:
+Below is a example Python script to load the model (assuming the model files have been placed in a folder called **model_files**) and run inference:
 
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -117,7 +122,7 @@ https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/LICENSE
 By using this model, you agree to: 
 Use the model for reseach and non-commercial purposes only, provide proper attribution to Meta AI when using or referencing the model, abide by any restrictions specified in the LLaMA license.
 
-And please review the full licence for more details.
+And you can review the full licence for more details.
 
 # Acknowledgements
 
