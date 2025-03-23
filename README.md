@@ -109,7 +109,7 @@ print(generated_text)
 It's not for commercial use and may produce biased or inaccurate results , use it with caution and adjust prompts as needed.
 
 
-#Compliance and Licensing
+# Compliance and Licensing
 
 This project uses Meta AI's LLaMA-3.1-8B model under the terms of the LLaMA License:
 https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/LICENSE
