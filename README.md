@@ -53,7 +53,7 @@ pip install torch transformers datasets peft huggingface_hub
 
 ### Model files
 
-The large safetensor model shards are not stored in this repository. Instead i have hosted them in MEGA , there are 6 files totalling around 11-12GB :
+The large safetensor model shards are not stored in this repository. Instead i have hosted them in MEGA , there are 6 files totalling around 11GB :
 
 - [model-00001-of-00006.safetensors:](https://mega.nz/file/rppWmDpS#X5utsf27-npdkFQVCQzz_gFi-s5a4oCuUSUYtJDw6p4)
   
