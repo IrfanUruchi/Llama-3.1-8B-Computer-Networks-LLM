@@ -85,7 +85,7 @@ model_dir = os.path.join(os.getcwd(), "model_files")
 model = AutoModelForCausalLM.from_pretrained(model_dir)
 tokenizer = AutoTokenizer.from_pretrained(model_dir)
 
-# You may need to change if you have diffrent GPU brand like if you have Apple M series, AMD ,Intel 
+# You may need to change if you have diffrent GPU brand like if you have Apple M series of chips, AMD or Intel 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f"Using device: {device}")
 
