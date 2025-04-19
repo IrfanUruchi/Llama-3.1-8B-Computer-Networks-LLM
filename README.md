@@ -39,7 +39,7 @@ Configuration files to run inference and also a set of links to download the lar
 - ### Code for cloning the repository (code is for bash linux/macOS)
 
 ```bash
-git clone https://github.com/<YOUR_GITHUB_USERNAME>/Llama-3.1-8B-Computer-Network-LLM.git
+git clone https://github.com/IrfanUruchi/Llama-3.1-8B-Computer-Networks-LLM
 cd Llama-3.1-8B-Computer-Network-LLM
 ```
 
