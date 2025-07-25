@@ -2,8 +2,13 @@
 
 **A fine-tuned 8B LLaMA model specialized for computer network-related tasks.**
 
-> **Note:** This repository and model are provided for research purposes only. Use of the underlying LLaMA model is subject to Meta AI's [LLaMA License](https://ai.facebook.com/blog/large-language-model-llama-meta-ai/). By using this repository, you agree to comply with all applicable terms and conditions of the LLaMA license.
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-181717?style=for-the-badge&logo=github)](https://github.com/IrfanUruchi/Llama-3.1-8B-Computer-Networks-LLM)
+[![Model Weights](https://img.shields.io/badge/🤗-Model_Weights-FFD21F?style=for-the-badge)](https://huggingface.co/Irfanuruchi/Llama-3.1-8B-Computer-Networks-LLM)
+[![License](https://img.shields.io/badge/License-LLaMA_3.1-blue.svg?style=for-the-badge)](https://github.com/meta-llama/llama3/blob/main/LICENSE)
 
+---
+
+> **Note:** This repository and model are provided for research purposes only. Use of the underlying LLaMA model is subject to Meta AI's [LLaMA License](https://ai.facebook.com/blog/large-language-model-llama-meta-ai/). By using this repository, you agree to comply with all applicable terms and conditions of the LLaMA license.
 
 ---
 
@@ -28,7 +33,41 @@ Configuration files to run inference and also a set of links to download the lar
 
 ---
 
-## Installation
+## Installation & Usage
+
+### Using Hugging Face Directly (Recommended)
+
+```python
+from transformers import AutoTokenizer, AutoModelForCausalLM
+import torch
+from transformers import BitsAndBytesConfig
+
+quant_config = BitsAndBytesConfig(
+    load_in_4bit=True,
+    bnb_4bit_compute_dtype=torch.float16
+)
+
+model = AutoModelForCausalLM.from_pretrained(
+    "IrfanUruchi/Llama-3.1-8B-Computer-Networks-LLM",
+    quantization_config=quant_config,
+    torch_dtype=torch.float16,
+    device_map="auto",
+    trust_remote_code=True
+)
+
+tokenizer = AutoTokenizer.from_pretrained("IrfanUruchi/Llama-3.1-8B-Computer-Networks-LLM")
+
+prompt = """You are a network engineering expert. Answer concisely:
+Q: What's the difference between TCP and UDP protocols?
+A:"""
+
+
+inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+outputs = model.generate(**inputs, max_new_tokens=150)
+print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+```
+
+### Local installation (GitHub):
 
 ### Prerequisites
 
@@ -69,6 +108,7 @@ The large safetensor model shards are not stored in this repository. Instead i h
 
 After downloading , place all the safetensors files into the folder with the other configuration file in your local copy of the repository. **Ensure that the model loading scripts point to the correct directory**.
 
+---
 
 ## Usage
 
